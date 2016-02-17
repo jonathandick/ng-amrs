@@ -20,7 +20,7 @@
     function patientTest(labEtl) {
 
       var modelDefinition = this;
-      
+
       //initialize private members
       var _personId = !UtilService.isNullOrUndefined(labEtl.person_id) ?
        labEtl.person_id : '';
@@ -28,7 +28,7 @@
        labEtl.uuid : '';
       var _encounterId = !UtilService.isNullOrUndefined(labEtl.encounter_id) ?
        labEtl.encounter_id : '';
-      var _encounterDatetime = !UtilService.isNullOrUndefined(labEtl.encounter_datetime) ?
+      var _testDatetime = !UtilService.isNullOrUndefined(labEtl.test_datetime) ?
        labEtl.encounter_datetime : '';
       var _encounterType = !UtilService.isNullOrUndefined(labEtl.encounter_type) ?
        labEtl.encounter_type : '';
@@ -81,12 +81,12 @@
         }
       };
 
-      modelDefinition.encounterDatetime = function (value) {
+      modelDefinition.testDatetime = function (value) {
         if (angular.isDefined(value)) {
-          _encounterDatetime = value;
+          _testDatetime = value;
         }
         else {
-          return _encounterDatetime;
+          return _testDatetime;
         }
       };
 
